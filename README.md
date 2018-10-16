@@ -1,4 +1,4 @@
-# bard
+# Badapple_BARD
 
 Badapple promiscuity plugin developed for the BARD project.
 
