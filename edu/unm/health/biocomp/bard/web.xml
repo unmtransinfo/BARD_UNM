@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+		http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+    <description>REST Services: BARD Plugins from UNM</description>
+    <display-name>REST Services: BARD Plugins from UNM</display-name>
+    <distributable/>
+
+
+    <!-- Badapple Plugin: -->
+    <servlet>
+        <description>REST Services: BARD Badapple Promiscuity Plugin from UNM</description>
+        <display-name>REST Services: BARD Badapple Promiscuity Plugin from UNM</display-name>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.spi.container.ContainerRequestFilters</param-name>
+            <param-value>gov.nih.ncgc.bard.rest.filter.CountFilter</param-value>
+        </init-param>
+        <init-param>
+            <param-name>NOTE</param-name>
+            <param-value>none (default via web.xml)</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup><!-- must be after init-param -->
+    </servlet>
+    <listener>
+      <listener-class>edu.unm.health.biocomp.bard.badapple.badapple_bardPlugin</listener-class>
+    </listener>
+    <context-param>
+        <param-name>BADAPPLE_DBTYPE</param-name>
+        <!-- param-value>mysql</param-value -->
+        <!-- param-value>postgres</param-value -->
+        <param-value>derby</param-value>
+    </context-param>
+    <context-param>
+        <param-name>BADAPPLE_DBHOST</param-name>
+        <!-- param-value>carlsbad.health.unm.edu</param-value -->
+        <!-- param-value>protein.nhgri.nih.gov</param-value -->
+        <param-value>localhost</param-value>
+    </context-param>
+    <context-param>
+        <param-name>BADAPPLE_DBPORT</param-name> <!-- postgres,mysql -->
+        <param-value>3306</param-value> <!-- mysql -->
+        <!-- param-value>5432</param-value --> <!-- postgres -->
+    </context-param>
+    <context-param>
+        <param-name>BADAPPLE_DBNAME</param-name>
+        <!-- param-value>plugin_badapple</param-value --> <!-- mysql -->
+        <!-- param-value>badapple</param-value --> <!-- mysql -->
+        <param-value>${catalina.home}/webapps/bardplugins/derby/badapple</param-value> <!-- derby -->
+        <!-- param-value>openchord</param-value --> <!-- postgres -->
+    </context-param>
+    <context-param>
+        <param-name>BADAPPLE_DBSCHEMA</param-name> <!-- postgres,derby -->
+        <!-- param-value>badapple</param-value --> <!-- postgres,derby -->
+        <!-- param-value>badapple2</param-value --> <!-- postgres,derby -->
+        <param-value>APP</param-value> <!-- derby default -->
+    </context-param>
+    <context-param>
+        <param-name>BADAPPLE_DBUSR</param-name> <!-- postgres,mysql -->
+        <param-value>bard</param-value>
+    </context-param>
+    <context-param>
+        <param-name>BADAPPLE_DBPW</param-name> <!-- postgres,mysql -->
+        <param-value>stratford</param-value>
+    </context-param>
+
+
+
+    <!-- Ro5 Plugin: -->
+    <servlet>
+        <description>REST Services: BARD Ro5 (Lipinski Rule of 5) Plugin, from UNM</description>
+        <display-name>REST Services: BARD Ro5 (Lipinski Rule of 5) Plugin, from UNM</display-name>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.spi.container.ContainerRequestFilters</param-name>
+            <param-value>gov.nih.ncgc.bard.rest.filter.CountFilter</param-value>
+        </init-param>
+        <init-param>
+            <param-name>NOTE</param-name>
+            <param-value>none (default via web.xml)</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup><!-- must be after init-param -->
+    </servlet>
+    <listener>
+      <listener-class>edu.unm.health.biocomp.bard.ro5.ro5_bardPlugin</listener-class>
+    </listener>
+
+
+
+    <!-- Smarts Plugin: -->
+    <servlet>
+        <description>REST Services: BARD Smarts Plugin, from UNM</description>
+        <display-name>REST Services: BARD Smarts Plugin, from UNM</display-name>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.spi.container.ContainerRequestFilters</param-name>
+            <param-value>gov.nih.ncgc.bard.rest.filter.CountFilter</param-value>
+        </init-param>
+        <init-param>
+            <param-name>NOTE</param-name>
+            <param-value>none (default via web.xml)</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup><!-- must be after init-param -->
+    </servlet>
+    <listener>
+      <listener-class>edu.unm.health.biocomp.bard.smarts.smarts_bardPlugin</listener-class>
+    </listener>
+
+
+    <!-- For Ro5, Smarts Plugin: -->
+    <context-param>
+        <param-name>BARD_API_HOST</param-name>
+        <param-value>bard.nih.gov</param-value>
+    </context-param>
+    <context-param>
+        <param-name>BARD_API_BASEPATH</param-name>
+        <param-value>/api</param-value>
+    </context-param>
+    <context-param>
+        <param-name>BARD_API_VERSION</param-name>
+        <param-value>latest</param-value>
+    </context-param>
+    <context-param>
+        <param-name>SMARTS_DIR</param-name>
+        <param-value>${catalina.home}/webapps/bardplugins/data</param-value>
+    </context-param>
+
+
+
+    <servlet>
+        <description>REST Services: BARD VCCLAB datalink web services plugin, from UNM</description>
+        <display-name>REST Services: BARD VCCLAB datalink web services plugin, from UNM</display-name>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>com.sun.jersey.spi.container.ContainerRequestFilters</param-name>
+            <param-value>gov.nih.ncgc.bard.rest.filter.CountFilter</param-value>
+        </init-param>
+        <init-param>
+            <param-name>NOTE</param-name>
+            <param-value>none (default via web.xml)</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup><!-- must be after init-param -->
+    </servlet>
+
+
+<!-- 
+    <servlet>
+        <description>HELLO-INIT Test Plugin, from UNM</description>
+        <display-name>HELLO-INIT Test Plugin, from UNM</display-name>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>HELLO_NOTE</param-name>
+            <param-value>none (default via web.xml)</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <listener>
+        <listener-class>edu.unm.health.biocomp.bard.helloinit.helloinit_bardPlugin</listener-class>
+    </listener>
+-->
+
+<!-- 
+    <servlet>
+        <description>HELLO Test Plugin, from UNM</description>
+        <display-name>HELLO Test Plugin, from UNM</display-name>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>HELLO_NOTE</param-name>
+            <param-value>none (default via web.xml)</param-value>
+        </init-param>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+-->
+
+
+    <servlet-mapping>
+        <servlet-name>ServletAdaptor</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
+
+</web-app>
