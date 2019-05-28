@@ -6,9 +6,13 @@ For info on BARD, see <http://bard.nih.gov/>.
 
 ## Dependencies
 
-* <https://github.com/ncats/bard>
-* <https://github.com/ncats/bardplugins>
 * `unm_biocomp_badapple`, `unm_biocomp_hscaf`, `unm_biocomp_db`, `unm_biocomp_util` 
+* <https://github.com/ncats/bard>
+* N.B.: NCATS libs depend on ChemAxon JChem 5.8.3. Follow their build instructions.
+
+```
+ant plugins
+```
 
 ### Maven configuration
 
