@@ -73,13 +73,7 @@
     <!-- dependency jars -->
     <property name="libj2ee" location="${appdir}/lib/servlet.jar" />
     <property name="libcos" location="${appdir}/lib/cos.jar" />
-    <property name="libdom4j" location="${appdir}/lib/dom4j-1.6.1.jar" />
-    <property name="libaxis" location="${javadir}/axis/axis.jar" />
     <property name="libjaxrpc" location="${appdir}/lib/jaxrpc.jar" />
-    <property name="libjna" location="${appdir}/lib/jna.jar" />
-    <property name="libjgrapht" location="${appdir}/lib/jgrapht-jdk1.5.jar" />
-    <property name="libjfreechart" location="${appdir}/lib/jfreechart-1.0.17.jar" />
-    <property name="libjcommon" location="${appdir}/lib/jcommon-1.0.21.jar" />
     <property name="libpgsql" location="${appdir}/lib/postgresql.jdbc3.jar" />
     <property name="liboracle" location="${appdir}/lib/ojdbc5.jar" />
     <property name="libmysql" location="${appdir}/lib/mysql-connector-java.jar" />
@@ -297,7 +291,7 @@ includes="*.java" -->
 
   <!-- Documentation -->
 
-  <property name="classpath" location="${srcdir};${jchemdir}/lib/jchem.jar;${libcos};${libaxis};${libj2ee}" />
+  <property name="classpath" location="${srcdir};${jchemdir}/lib/jchem.jar;${libcos};${libj2ee}" />
 
   <presetdef name="jdoc">
     <javadoc author="true" version="true" use="true" classpath="${classpath}"
