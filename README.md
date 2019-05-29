@@ -1,4 +1,4 @@
-# `UNM_BIOCOMP_BARD`
+# `UNM_BIOCOMP_BARD` <img align="right" src="/project/doc/images/bard_logo.png" height="120">
 
 Badapple promiscuity plugin developed for the BARD project, and more.
 
