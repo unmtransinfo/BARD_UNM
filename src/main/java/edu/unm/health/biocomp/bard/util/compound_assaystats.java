@@ -23,6 +23,7 @@ import chemaxon.sss.search.*;
 import chemaxon.struc.*;
 import chemaxon.util.MolHandler;
 import chemaxon.marvin.io.*;
+import com.chemaxon.version.VersionInfo;
 
 import edu.unm.health.biocomp.hscaf.*;
 import edu.unm.health.biocomp.util.*;
@@ -118,7 +119,7 @@ public class compound_assaystats
     molWriter_mol=new MolExporter(new FileOutputStream(ofile_mol),ofmt);
 
     if (verbose>1)
-      System.err.println("JChem version: "+chemaxon.jchem.version.VersionInfo.getVersion());
+      System.err.println("JChem version: "+VersionInfo.getVersion());
 
     java.util.Date t_0 = new java.util.Date();
     if (verbose>0)

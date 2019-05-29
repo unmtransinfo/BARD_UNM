@@ -166,7 +166,7 @@ public class hscaf_bardPlugin implements IPlugin, ServletContextListener
     ArrayList<ScaffoldScore> scores=null;
     String smiles=null; //compound smiles
     try {
-      scores=badapple_utils.GetScaffoldScoresForDBMol(DBCON,HSCAF_DBSCHEMA,cid,0);
+      scores=badapple_utils.GetScaffoldScoresForDBMol(DBCON,HSCAF_DBSCHEMA,"rdkit",cid,0);
       smiles=badapple_utils.CID2Smiles(DBCON,HSCAF_DBSCHEMA,cid,false);
     }
     catch (SQLException e) { throw new WebApplicationException(e, 503); } //service-unavailable
@@ -221,7 +221,7 @@ public class hscaf_bardPlugin implements IPlugin, ServletContextListener
         if (expand!=null) 
         {
           Long scafid=null;
-          try { scafid=badapple_utils.GetScaffoldID(DBCON,HSCAF_DBSCHEMA,scaf.getCansmi(),0); }
+          try { scafid=badapple_utils.GetScaffoldID(DBCON,HSCAF_DBSCHEMA,"rdkit",scaf.getCansmi(),0); }
           catch (Exception e) { } //Not in db.
           jsonob2.put("scafid",scafid);
           scaf.setID(scafid);
@@ -281,7 +281,7 @@ public class hscaf_bardPlugin implements IPlugin, ServletContextListener
     ArrayList<ScaffoldScore> scores=null;
     String smiles=null;
     try {
-      scores=badapple_utils.GetScaffoldScoresForDBMol(DBCON,HSCAF_DBSCHEMA,cid,0);
+      scores=badapple_utils.GetScaffoldScoresForDBMol(DBCON,HSCAF_DBSCHEMA,"rdkit",cid,0);
       smiles=badapple_utils.CID2Smiles(DBCON,HSCAF_DBSCHEMA,cid,false); //BADAPPLE way
     }
     catch (SQLException e) { throw new WebApplicationException(e, 503); } //service-unavailable

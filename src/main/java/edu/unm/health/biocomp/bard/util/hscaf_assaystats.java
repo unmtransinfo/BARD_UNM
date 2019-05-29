@@ -23,6 +23,7 @@ import chemaxon.sss.search.*;
 import chemaxon.struc.*;
 import chemaxon.util.MolHandler;
 import chemaxon.marvin.io.*;
+import com.chemaxon.version.VersionInfo;
 
 import edu.unm.health.biocomp.hscaf.*;
 import edu.unm.health.biocomp.util.*;
@@ -125,7 +126,7 @@ public class hscaf_assaystats
     molWriter_scaf=new MolExporter(new FileOutputStream(ofile_scaf),ofmt);
 
     if (verbose>1)
-      System.err.println("JChem version: "+chemaxon.jchem.version.VersionInfo.getVersion());
+      System.err.println("JChem version: "+VersionInfo.getVersion());
 
     // First read molecule file and attach list of cids to each scaf
 
