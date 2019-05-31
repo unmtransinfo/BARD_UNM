@@ -1,5 +1,8 @@
 # `UNM_BIOCOMP_BARD` <img align="right" src="/project/doc/images/bard_logo.png" height="120">
 
+_(Mavenization in progress. Need separate [JW]ARs, e.g. `bardplugin\_badapple`, for
+each plugin and `bard\_util` JAR artifact.)_
+
 Badapple promiscuity plugin developed for the BARD project, and more.
 
 For info on BARD, see <http://bard.nih.gov/>.
