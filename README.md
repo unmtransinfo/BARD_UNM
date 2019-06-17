@@ -19,7 +19,7 @@ ant plugins
 
 ### Maven configuration
 
-* The BARD API JAR must be build and installed locally.
+* The BARD API JAR must be built and installed locally.
 
 ```
 mvn install:install-file -Dfile=bardplugin.jar -DgroupId=gov.nih.ncats -DartifactId=bardplugin -Dversion=1.0-SNAPSHOT -Dpackaging=jar -DlocalRepositoryPath=/home/www/htdocs/.m2/
@@ -27,7 +27,13 @@ mvn install:install-file -Dfile=bardplugin.jar -DgroupId=gov.nih.ncats -Dartifac
 
 ## Compilation
 
+```
+mvn clean install
+```
+
 ## Usage
+
+## Deployment
 
 ## References
 

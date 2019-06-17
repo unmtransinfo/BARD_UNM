@@ -16,7 +16,7 @@
   <name>UNM_BIOCOMP_BARD</name>
   <packaging>jar</packaging>
   <description>BARD Java code, including Badapple plugin</description>
-  <url>https://github.com/unmtransinfo/unm_biocomp_bard</url>
+  <url>https://github.com/unmtransinfo/BARD_UNM</url>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -28,28 +28,13 @@
   </properties>
 
   <repositories>
-    <repository>
+    <repository> <!-- For bardplugin.jar (must be manually installed). -->
       <id>local.http</id>
       <url>http://localhost/.m2/</url>
     </repository>
-
-    <!-- https://docs.oracle.com/middleware/1213/core/MAVEN/config_maven_repo.htm -->
-    <repository>
-      <id>maven.oracle.com</id>
-      <releases>
-        <enabled>true</enabled>
-      </releases>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-      <url>https://maven.oracle.com</url>
-      <layout>default</layout>
-    </repository>
-
   </repositories>
 
   <dependencies>
-
     <dependency>
       <groupId>gov.nih.ncats</groupId>
       <artifactId>bardplugin</artifactId>
@@ -101,13 +86,6 @@
       <groupId>org.postgresql</groupId>
       <artifactId>postgresql</artifactId>
       <version>${postgresql.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>oracle.jdbc</groupId>
-      <artifactId>ojdbc6</artifactId>
-      <!-- version>11.2.0.4</version -->
-      <version>11.2.0.4.0</version>
     </dependency>
 
     <dependency>
