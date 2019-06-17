@@ -25,7 +25,7 @@ import gov.nih.ncgc.bard.tools.*; //Util,PluginValidator
 import gov.nih.ncgc.bard.plugin.*; //IPlugin,PluginManifest
 import gov.nih.ncgc.bard.plugin.PluginManifest.*; //PluginResource,PathArg
 
-import edu.unm.health.biocomp.db.*; //DBCon
+import edu.unm.health.biocomp.util.db.*; //DBCon
 import edu.unm.health.biocomp.badapple.*;  //badapple_utils
 
 /**	BADAPPLE Promiscuity Plugin from UNM, evidence-based promiscuity scores.

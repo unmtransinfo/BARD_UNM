@@ -26,7 +26,7 @@ import chemaxon.marvin.io.*; //MolExportException
 import chemaxon.util.MolHandler;
 import chemaxon.sss.search.SearchException;
 
-import edu.unm.health.biocomp.db.*; //DBCon
+import edu.unm.health.biocomp.util.db.*; //DBCon
 import edu.unm.health.biocomp.badapple.*; //badapple_utils
 import edu.unm.health.biocomp.hscaf.*;
 

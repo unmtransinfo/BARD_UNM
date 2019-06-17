@@ -21,7 +21,7 @@ import org.restlet.util.*;
 import org.json.*;
 import org.restlet.ext.json.*;
 
-import edu.unm.health.biocomp.db.pg_utils;
+import edu.unm.health.biocomp.util.db.pg_utils;
 
 /**	Simple db ServerResource.  Invoked by Application.
 	Given smiles, lookup ID.
