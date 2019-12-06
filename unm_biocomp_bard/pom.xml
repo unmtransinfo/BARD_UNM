@@ -12,9 +12,7 @@
 
   <groupId>unmbiocomputing</groupId>
   <artifactId>unm_biocomp_bard</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
   <name>UNM_BIOCOMP_BARD</name>
-  <packaging>jar</packaging>
   <description>BARD Java code, including Badapple plugin</description>
   <url>https://github.com/unmtransinfo/BARD_UNM</url>
 
@@ -64,6 +62,11 @@
     <dependency>
       <groupId>unmbiocomputing</groupId>
       <artifactId>unm_biocomp_vcclab</artifactId>
+      <version>0.0.1-SNAPSHOT</version>
+    </dependency>
+    <dependency>
+      <groupId>unmbiocomputing</groupId>
+      <artifactId>unm_biocomp_smarts</artifactId>
       <version>0.0.1-SNAPSHOT</version>
     </dependency>
     <dependency>
@@ -135,7 +138,7 @@
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>2.1.4</version>
+      <version>2.9.10.1</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
@@ -158,7 +161,7 @@
     <dependency>
       <groupId>org.apache.solr</groupId>
       <artifactId>solr-core</artifactId>
-      <version>3.6.1</version>
+      <version>8.2.0</version>
     </dependency>
 
     <dependency>
