@@ -70,8 +70,8 @@ public class db_badapple_prom_restletServer extends ServerResource
       String DBUSER="webuser";
       String DBPW="foobar";
 
-      DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
-      Connection dbcon=DriverManager.getConnection("jdbc:oracle:thin:@"+DBHOST+":"+DBPORT+":"+DBID,DBUSER,DBPW);
+      DriverManager.registerDriver(new org.postgresql.Driver());
+      Connection dbcon=DriverManager.getConnection("jdbc:postgresql://"+DBHOST+":"+DBPORT+"/"+DBID,DBUSER,DBPW);
 
       String sql=(
 	" SELECT DISTINCT "+
