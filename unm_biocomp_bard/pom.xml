@@ -23,7 +23,7 @@
     <jdk.version>1.8</jdk.version>
     <derby.version>10.10.1.1</derby.version>
     <mysql.version>8.0.28</mysql.version>
-    <postgresql.version>42.4.1</postgresql.version>
+    <postgresql.version>42.4.3</postgresql.version>
     <jersey.version>1.19.4</jersey.version>
   </properties>
 
